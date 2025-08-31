@@ -43,7 +43,8 @@
 					<div class="hidden navbar-center lg:flex"></div>
 					<div class="space-x-1 navbar-end">
 						<button
-							class="flex items-center rounded-full bg-green-50 btn btn-sm md:btn-md"
+							id="heart-nav-btn"
+							class="flex items-center w-20 rounded-full bg-green-50 btn btn-sm md:btn-md"
 						>
 							<span id="heart-count">0</span>
 							<img
@@ -53,7 +54,8 @@
 							/>
 						</button>
 						<button
-							class="flex items-center rounded-full bg-green-50 btn btn-sm md:btn-md"
+							id="coin-nav-btn"
+							class="flex items-center w-20 rounded-full bg-green-50 btn btn-sm md:btn-md"
 						>
 							<span id="coin-count">100</span>
 							<img
@@ -63,7 +65,8 @@
 							/>
 						</button>
 						<button
-							class="text-white bg-green-500 rounded-full btn btn-sm md:btn-md"
+							id="copy-nav-btn"
+							class="w-20 text-white bg-green-500 rounded-full btn btn-sm md:btn-md"
 						>
 							<span id="copy-count">0</span> Copy
 						</button>
@@ -96,7 +99,7 @@
 			<section
 				class="grid w-11/12 grid-cols-1 gap-4 py-6 mx-auto max-w-screen-2xl md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
 			>
-				<div
+				<aside
 					class="grid grid-cols-1 gap-4 lg:col-span-2 xl:col-span-3 lg:grid-cols-2 xl:grid-cols-3"
 				>
 					<!-- : 1 national -->
@@ -110,7 +113,10 @@
 										alt=""
 									/>
 								</figure>
-								<span id="national-heart">
+								<span
+									class="heart-btn"
+									id="national-heart"
+								>
 									<i class="text-base cursor-pointer fa-regular fa-heart"></i>
 								</span>
 							</div>
@@ -166,7 +172,10 @@
 										alt=""
 									/>
 								</figure>
-								<span id="police-heart">
+								<span
+									class="heart-btn"
+									id="police-heart"
+								>
 									<i class="text-base cursor-pointer fa-regular fa-heart"></i>
 								</span>
 							</div>
@@ -222,7 +231,10 @@
 										alt=""
 									/>
 								</figure>
-								<span id="fire-heart">
+								<span
+									class="heart-btn"
+									id="fire-heart"
+								>
 									<i class="text-base cursor-pointer fa-regular fa-heart"></i>
 								</span>
 							</div>
@@ -278,7 +290,10 @@
 										alt=""
 									/>
 								</figure>
-								<span id="ambulance-heart">
+								<span
+									class="heart-btn"
+									id="ambulance-heart"
+								>
 									<i class="text-base cursor-pointer fa-regular fa-heart"></i>
 								</span>
 							</div>
@@ -334,7 +349,10 @@
 										alt=""
 									/>
 								</figure>
-								<span id="women-heart">
+								<span
+									class="heart-btn"
+									id="women-heart"
+								>
 									<i class="text-base cursor-pointer fa-regular fa-heart"></i>
 								</span>
 							</div>
@@ -390,7 +408,10 @@
 										alt=""
 									/>
 								</figure>
-								<span id="anti-heart">
+								<span
+									class="heart-btn"
+									id="anti-heart"
+								>
 									<i class="text-base cursor-pointer fa-regular fa-heart"></i>
 								</span>
 							</div>
@@ -435,8 +456,28 @@
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="border"></div>
+				</aside>
+				<aside class="bg-base-100">
+					<header class="flex items-center justify-between px-4 pt-4">
+						<div class="flex items-center gap-2 text-lg font-semibold">
+							<!-- clock -->
+							<i class="fa-regular fa-clock"></i>
+							<h6>Call History</h6>
+						</div>
+						<div>
+							<button
+								id="clear-history"
+								class="text-white bg-green-500 rounded-full btn btn-sm active:bg-green-600"
+							>
+								Clear
+							</button>
+						</div>
+					</header>
+					<main
+						id="call-history-container"
+						class="flex flex-col gap-2 p-4 overflow-y-auto border"
+					></main>
+				</aside>
 			</section>
 		</main>
 
