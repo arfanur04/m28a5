@@ -45,3 +45,41 @@ document.querySelectorAll(".call-btn").forEach((callBtn) => {
 document.getElementById("clear-history-btn").addEventListener("click", (e) => {
 	document.getElementById("call-history-container").innerHTML = "";
 });
+
+document.querySelectorAll(".copy-btn").forEach((copyBtn) => {
+	copyBtn.addEventListener("click", (e) => {
+		const cardShortNameId = e.currentTarget.parentElement.id;
+		const cardNum = document.getElementById(
+			`${cardShortNameId}-number`
+		)?.innerText;
+
+		if (!cardNum) {
+			console.log("no text found to copy");
+			return;
+		}
+		//: show alert and increase copy count
+		alert(`${cardNum} copied to clipboard`);
+		const copyCountElem = document.getElementById("copy-count");
+		copyCountElem.innerText = +copyCountElem.innerText + 1;
+
+		//: copy hotline number
+		try {
+			if (navigator.clipboard && navigator.clipboard.writeText) {
+				navigator.clipboard
+					.writeText(cardNum)
+					.then(() => console.log("copied using navigator.clipboard.writeText"))
+					.catch((error) => console.log("Failed to copy text: ", error));
+			} else {
+				// Fallback for browsers that do not support the Clipboard API
+				const textArea = document.createElement("textarea");
+				textArea.value = cardNum;
+				document.body.appendChild(textArea);
+				textArea.select();
+				document.execCommand("copy");
+				document.body.removeChild(textArea);
+			}
+		} catch (error) {
+			console.log("Failed to copy text: ", error);
+		}
+	});
+});
