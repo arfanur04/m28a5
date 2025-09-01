@@ -7,6 +7,11 @@
 			content="width=device-width, initial-scale=1.0"
 		/>
 		<title>Joruri Seba</title>
+		<link
+			rel="shortcut icon"
+			href="./assets/emergency.png"
+			type="image/x-icon"
+		/>
 		<!-- font awesome cdn -->
 		<link
 			rel="stylesheet"
@@ -143,7 +148,10 @@
 							<div class="grow">
 								<span class="px-3 py-1 bg-gray-100 rounded-full">All</span>
 							</div>
-							<div class="flex items-center gap-2 mt-6">
+							<div
+								id="national"
+								class="flex items-center gap-2 mt-6"
+							>
 								<button
 									id="national-copy"
 									class="flex-1 rounded-md btn btn-sm"
@@ -153,7 +161,7 @@
 								</button>
 								<button
 									id="national-call"
-									class="flex-1 text-white bg-green-500 rounded-md btn btn-sm active:bg-green-600"
+									class="flex-1 text-white bg-green-500 rounded-md btn btn-sm active:bg-green-600 call-btn"
 								>
 									<i class="fa-solid fa-phone"></i>
 									Call
@@ -202,7 +210,10 @@
 							<div class="grow">
 								<span class="px-3 py-1 bg-gray-100 rounded-full">Police</span>
 							</div>
-							<div class="flex items-center gap-2 mt-6">
+							<div
+								id="police"
+								class="flex items-center gap-2 mt-6"
+							>
 								<button
 									id="police-copy"
 									class="flex-1 rounded-md btn btn-sm"
@@ -212,7 +223,7 @@
 								</button>
 								<button
 									id="police-call"
-									class="flex-1 text-white bg-green-500 rounded-md btn btn-sm active:bg-green-600"
+									class="flex-1 text-white bg-green-500 rounded-md btn btn-sm active:bg-green-600 call-btn"
 								>
 									<i class="fa-solid fa-phone"></i>
 									Call
@@ -261,7 +272,10 @@
 							<div class="grow">
 								<span class="px-3 py-1 bg-gray-100 rounded-full">Fire</span>
 							</div>
-							<div class="flex items-center gap-2 mt-6">
+							<div
+								id="fire"
+								class="flex items-center gap-2 mt-6"
+							>
 								<button
 									id="fire-copy"
 									class="flex-1 rounded-md btn btn-sm"
@@ -271,7 +285,7 @@
 								</button>
 								<button
 									id="fire-call"
-									class="flex-1 text-white bg-green-500 rounded-md btn btn-sm active:bg-green-600"
+									class="flex-1 text-white bg-green-500 rounded-md btn btn-sm active:bg-green-600 call-btn"
 								>
 									<i class="fa-solid fa-phone"></i>
 									Call
@@ -320,7 +334,10 @@
 							<div class="grow">
 								<span class="px-3 py-1 bg-gray-100 rounded-full">Health</span>
 							</div>
-							<div class="flex items-center gap-2 mt-6">
+							<div
+								id="ambulance"
+								class="flex items-center gap-2 mt-6"
+							>
 								<button
 									id="ambulance-copy"
 									class="flex-1 rounded-md btn btn-sm"
@@ -330,7 +347,7 @@
 								</button>
 								<button
 									id="ambulance-call"
-									class="flex-1 text-white bg-green-500 rounded-md btn btn-sm active:bg-green-600"
+									class="flex-1 text-white bg-green-500 rounded-md btn btn-sm active:bg-green-600 call-btn"
 								>
 									<i class="fa-solid fa-phone"></i>
 									Call
@@ -379,7 +396,10 @@
 							<div class="grow">
 								<span class="px-3 py-1 bg-gray-100 rounded-full">Help</span>
 							</div>
-							<div class="flex items-center gap-2 mt-6">
+							<div
+								id="women"
+								class="flex items-center gap-2 mt-6"
+							>
 								<button
 									id="women-copy"
 									class="flex-1 rounded-md btn btn-sm"
@@ -389,7 +409,7 @@
 								</button>
 								<button
 									id="women-call"
-									class="flex-1 text-white bg-green-500 rounded-md btn btn-sm active:bg-green-600"
+									class="flex-1 text-white bg-green-500 rounded-md btn btn-sm active:bg-green-600 call-btn"
 								>
 									<i class="fa-solid fa-phone"></i>
 									Call
@@ -438,7 +458,10 @@
 							<div class="grow">
 								<span class="px-3 py-1 bg-gray-100 rounded-full">Help</span>
 							</div>
-							<div class="flex items-center gap-2 mt-6">
+							<div
+								id="anti"
+								class="flex items-center gap-2 mt-6"
+							>
 								<button
 									id="anti-copy"
 									class="flex-1 rounded-md btn btn-sm"
@@ -448,7 +471,7 @@
 								</button>
 								<button
 									id="anti-call"
-									class="flex-1 text-white bg-green-500 rounded-md btn btn-sm active:bg-green-600"
+									class="flex-1 text-white bg-green-500 rounded-md btn btn-sm active:bg-green-600 call-btn"
 								>
 									<i class="fa-solid fa-phone"></i>
 									Call
@@ -475,7 +498,7 @@
 					</header>
 					<main
 						id="call-history-container"
-						class="flex flex-col gap-2 p-4 overflow-y-auto border"
+						class="flex flex-col gap-2 p-4 overflow-y-auto"
 					></main>
 				</aside>
 			</section>
