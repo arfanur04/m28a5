@@ -19,9 +19,8 @@ document.querySelectorAll(".call-btn").forEach((callBtn) => {
 
 		const coinCountElem = document.getElementById("coin-count");
 		if (cardFullName && cardNum && +coinCountElem.innerText >= 20) {
-			//: Show alert
 			const callAlert = `📞 ${cardFullName} ${cardNum} ...`;
-			// alert(callAlert);
+			alert(callAlert);
 			coinCountElem.innerText = +coinCountElem.innerText - 20;
 			const callHistoryContainer = document.getElementById(
 				"call-history-container"
@@ -41,4 +40,8 @@ document.querySelectorAll(".call-btn").forEach((callBtn) => {
 			alert("You don't have enough coins");
 		}
 	});
+});
+
+document.getElementById("clear-history-btn").addEventListener("click", (e) => {
+	document.getElementById("call-history-container").innerHTML = "";
 });
